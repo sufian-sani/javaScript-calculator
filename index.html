@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript (Calculator)</title>
+	<style type="text/css">
+		.calculator{
+			width: 350px;
+			margin: auto;
+			margin-top: 100px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		input{
+			flex-basis: 100%;
+			max-width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			color: #000;
+			font-size: 18px;
+			background-color: #fff;
+		}
+		button{
+			flex-basis: 20%;
+			max-width: 20%;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: #555;
+			color: #fff;
+			font-size: 18px;
+		}
+		.equal{
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<div class="calculator">
+		<input type="text" id="display" readonly> <br>
+		<button onclick="one()">1</button>
+		<button onclick="two()">2</button>
+		<button onclick="thr()">3</button>
+		<button onclick="fou()">4</button>
+		<button onclick="fiv()">5</button>
+		<button onclick="six()">6</button>
+		<button onclick="sev()">7</button>
+		<button onclick="eig()">8</button>
+		<button onclick="nin()">9</button>
+		<button onclick="zen()">0</button>
+		<button onclick="add()">+</button>
+		<button onclick="sub()">-</button>
+		<button onclick="dev()">/</button>
+		<button onclick="mul()">x</button>
+		<button onclick="clr()">C</button>
+		<button onclick="equal()" class="equal">=</button>
+	</div>
+
+	<script>
+
+		var Display = document.getElementById("display");
+
+		function one(){
+			Display.value += 1;
+		}
+		function two(){
+			Display.value += 2;
+		}
+		function thr(){
+			Display.value += 3;
+		}
+		function fou(){
+			Display.value += 4;
+		}
+		function fiv(){
+			Display.value += 5;
+		}
+		function six(){
+			Display.value += 6;
+		}
+		function sev(){
+			Display.value += 7;
+		}
+		function eig(){
+			Display.value += 8;
+		}
+		function nin(){
+			Display.value += 9;
+		}
+		function zen(){
+			Display.value += 0;
+		}
+		function add(){
+			Display.value += "+";
+		}
+		function sub(){
+			Display.value += "-";
+		}
+		function dev(){
+			Display.value += "/";
+		}
+		function mul(){
+			Display.value += "*";
+		}
+		function equal(){
+			var calculator = eval(Display.value);
+			Display.value = calculator;
+		}
+		function clr(){
+			Display.value = "";
+		}
+
+
+
+
+		// var Name = "Abu Sufian"
+		// var Email = "abu5suffian@gmail.com"
+		// var Address = "paba, Rajshahi"
+		// var Roll = "153321014"
+
+		// var Info = "<b>Full Name: </b>" + name + "<br>" + "<b>Email Address: </b>" + Email + "<br>" + "<b>Address: </b>" + Address + "<br>" + "<b> Roll: </b>" + Roll;
+
+		// document.write(Info)
+		// function addition(fn,sn){
+		// 	var a = fn;
+		// 	var b = sn;
+		// 	console.log(a + b);
+		// }
+		// addition(88,56)
+		// var Name = ["ashik","muna",44,"rony","kala","kader"];
+
+		// Name.push("manik");
+		// Name.pop("Abdul")
+		// console.log(Name);
+	</script>
+</body>
+</html>
